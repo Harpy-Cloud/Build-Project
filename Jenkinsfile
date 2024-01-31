@@ -78,7 +78,7 @@ pipeline {
                     script {
                         // withCredentials([usernameColonPassword(credentialsId: 'docker', variable: 'docker_password')])
                         withCredentials([usernamePassword(credentialsId: 'docker', passwordVariable: 'docker_password', usernameVariable: 'docker_name')]) {
-                            sh 'docker run -d --name g3 -p 8085:8080 kachio/gradleproject:latest'
+                            sh 'docker run -d --name g3 -p 8082:8080 kachio/gradleproject:latest'
                         }
                     }
                 }
